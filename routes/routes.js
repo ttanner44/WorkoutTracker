@@ -16,13 +16,13 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
 
 router.get("/api/workouts", ({ body, params }, res) => {
     Workout.find()
-        .then(dbWorkouts => {res.json(dbWorkouts);})
+        .then(dbWorkout => {res.json(dbWorkout);})
         .catch(err => {res.json(err);});
 });
 
 router.get("/api/workouts/range", ({ body, params }, res) => {
     Workout.find({})
-        .then(dbWorkouts => {res.json(dbWorkout);})
+        .then(dbWorkout => {res.json(dbWorkout);})
         .catch(err => {res.json(err);
         });
 });
